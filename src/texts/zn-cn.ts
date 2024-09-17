@@ -1,6 +1,6 @@
 import { AUTHOR } from "../env"
-export const ZNCNTEXT={
-    "lang": "zh-cn",
+export const ZHTEXT={
+    "lang": "zh",
     "title": "字符计数器。- IATechCloud",
     title2: "字符计数器。完全免费。",
     "description": "字符、单词和行计数器。免费在线工具。",

@@ -2,7 +2,7 @@ import { ENUSTEXTS } from "./texts/en-us";
 import { ESTEXTS } from "./texts/es";
 import { PTBRTEXTS } from "./texts/pt-br";
 import { RUSTEXTS } from "./texts/ru";
-import { ZNCNTEXT } from "./texts/zn-cn";
+import { ZHTEXT } from "./texts/zn-cn";
 
 export const LANGS={
     ptBr:{
@@ -17,9 +17,9 @@ export const LANGS={
         path:['es-es','contador-de-caracteres'],
         data:ESTEXTS,
     },
-    znCN:{
-        path:['zn-cn','zi-fu-ji-shu-qi'],
-        data:ZNCNTEXT,
+    zh:{
+        path:['zh','zi-fu-ji-shu-qi'],
+        data:ZHTEXT,
     },
     ru:{
         path:['ru','schetchik-simvolov'],
