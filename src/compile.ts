@@ -7,10 +7,10 @@ const BUILDPATH='./build';
 const STATICPATH='src';   
 
 if(fs.existsSync(BUILDPATH)){
-    fs.rmSync(BUILDPATH,{recursive:true});
-    
+    fs.rmSync(BUILDPATH,{recursive:true}); 
 }  
 fs.mkdirSync(BUILDPATH);
+fs.cpSync(path.join(TEMPLATEPATH,'lang.html'),path.join(BUILDPATH,'index.html'));
 for(let lang of Object.values(LANGS)){
     let finalPath=path.join(BUILDPATH);
     for(let p of lang.path){
@@ -20,6 +20,6 @@ for(let lang of Object.values(LANGS)){
     fs.cpSync(path.join(TEMPLATEPATH,STATICPATH),path.join(finalPath,STATICPATH),{recursive:true});
     const htmlText=fs.readFileSync(path.join(TEMPLATEPATH,'index.html')).toString();
     const result=textReplaceEngine(htmlText,lang.data);
-    fs.cpSync(path.join(TEMPLATEPATH,'favicon.png'),path.join(finalPath,'favicon.png'))
+    fs.cpSync(path.join(TEMPLATEPATH,'favicon.png'),path.join(finalPath,'favicon.png'));
     fs.writeFileSync(path.join(finalPath,'index.html'),result);
 }
