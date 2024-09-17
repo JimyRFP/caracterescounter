@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="&%&LANG&%&">
+    <head>
+        <title>&%&TITLE&%&</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="&%&DESCRIPTION&%&">
+        <meta name="keywords" content="&%&KEYWORDS&%&" />
+        <meta name="author" content="&%&AUTHOR&%&" />
+        <link rel="apple-touch-icon" href="./favicon.png"/>
+        <link rel="icon" href="./favicon.png" type="image/x-icon">
+
+        <link href="./src/css/style.css" rel="stylesheet">
+        <script src="./src/js/charsfunc.js"></script>
+        <script>
+            const calc=(elm)=>calcCharsAndUpdateHtml(elm,['&%&CHARS&%&','&%&WORDS&%&','&%&LINES&%&']);
+        </script>
+    </head>
+    <body>
+          <h1>&%&TITLE&%&</h1>
+          <div style="margin-top: 100px; width: 100%;">
+          <div class="paper max80"> 
+          <h2>&%&ALONE_TITLE&%&</h2>
+          <textarea class="area"  oninput="calc(this)" placeholder="&%&TEXTAREA_PLACEHOLDER&%&"></textarea>
+          
+          <div>
+            <ul id="result_list">
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+          </div>
+        </div>
+        </div>
+        <div class="paper max80" style="margin-top: 100px;">
+            <h4>&%&EXPLANATION_TITLE&%&</h4>
+            <h5>&%&EXPLANATION&%&</h5>
+        </div>
+        <div class="" style="margin-top: 100px;">
+            <span>&%&IATECH_DESCRIPTION&%&</span>
+        </div>
+    </body>
+    <script>
+        calc({});
+    </script>
+</html>
